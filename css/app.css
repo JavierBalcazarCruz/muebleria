@@ -1,17 +1,40 @@
-h1{
-   
-    color: #000;
+html{
+    box-sizing: border-box;
 }
-
-h1 span{
-    color:#037bc0 ;
+*, *:before, *:after{
+    box-sizing: inherit;
 }
-
-
-nav a{
-    text-transform: uppercase;
+/** Globales **/
+a{
+    text-decoration: none;
+    color:#000;
 }
-.navegacion a
+.contenedor
 {
-    background-color: aqua;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
 }
+
+
+/** Header y navegación **/
+.nombre-sitio{
+    margin: 50 0 50 0;   
+    text-align: center;
+}
+
+.contenedor-navegacion{
+    border-top: 1px solid #e1e1e1;
+}
+.nav-principal{
+ padding: 20px 0;
+}
+
+.hero{
+    background-image: url('../img/principal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    
+}
+
+/** Box Model **/

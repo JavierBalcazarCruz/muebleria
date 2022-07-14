@@ -5,22 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aprendiendo html</title>
+       <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/app.css">
 
     </head>
     <body>
         <header>
-            <h1>Tienda <span>Muebles</span></h1>
+            <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
         </header>
-
-        <nav id="navegacion">
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="blog.html">Blog</a>
-            <a href="galería">Galería</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+<div class="contenedor-navegacion">
+    <nav class="nav-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="galería">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</div>
+        
+        <div class="hero"></div>
 
         <section>
             <h2>Categorías de<span> Productos</span></h2>
@@ -38,7 +42,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="sobre-nosotros">
             <div>
                 <h2>Sobre Nosotros</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla laboriosam quae eaque,
@@ -124,7 +128,7 @@
         <footer>
             <div>
                 <h3>Categorias</h3>
-                <nav id="navegacion">
+                <nav>
                     <a href="">Cocina</a>
                     <a href="">Oficina</a>
                     <a href="">Jardin</a>
