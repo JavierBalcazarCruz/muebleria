@@ -17,7 +17,7 @@ h1,
 h2,
 h3 {
   font-family: "Playfair Display", serif;
-  margin: 0 0 5rem 0;
+  margin: 0 0 2rem 0;
 }
 
 h1 {
@@ -69,14 +69,23 @@ img {
   border-top: 1px solid #e1e1e1;
 }
 .nav-principal {
+  padding: 2rem 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
 }
 .nav-principal a:hover{
   background-color: #037bc0;
   color: #fff;
+}
+
+
+
+@media (min-width:768px ){ 
+  .nav-principal {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .hero {
@@ -84,20 +93,42 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 550px;
+  height: 25rem;
+}
+@media (min-width: 768px){
+  .hero {
+    height:55rem;
+  }
+  
 }
 /** Categorias **/
 .categorias{
-    padding-top: 5rem;
+    padding: 5rem 0;
 }
+
+.categoria img{
+  width: 100%;
+}
+.categoria{
+  margin-bottom: 2rem;
+}
+
+@media (min-width:768px ){ 
+  .listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .categoria{
+    margin-bottom: 0;
+  }
+}
+
+
 .categorias h2 {
   text-align: center;
 }
-.listado-categorias {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+
 .categoria a {
   display: block;
   text-align: center;
@@ -109,22 +140,48 @@ img {
   color: #fff;
   border-bottom-right-radius: 10px;
 }
+
+
+
 /**Sobre nosotros **/
 .sobre-nosotros{
+    background-image: linear-gradient(to bottom, transparent 50%, #037bc0 50%,#037bc0 100% ), url(../img/nosotros.jpg);
+  
+    background-position: center, top left;
+    background-repeat: no-repeat;
+    background-size: 100%, 70rem;
+}
+
+@media (min-width: 768px){ 
+  .sobre-nosotros{
     background-image: linear-gradient(to right, transparent 50%, #037bc0 50%,#037bc0 100% ), url(../img/nosotros.jpg);
     padding: 10rem 0;
     background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 100%, 120rem;
+    background-size: 100%, 160rem;
 }
+}
+
 .sobre-nosotros-grid{
-  display: flex;
-  justify-content: end;
+  display: grid;
+  grid-template-rows:repeat(2,1fr) ;
 }
 .texto-nosotros{
-  flex-basis: 50%;
-  padding-left: 10rem;
-  color: #fff;
+  grid-row: 2/3;
+   color: #fff;
+   padding: 5rem;
+ }
+
+@media (min-width: 768px){ 
+  .sobre-nosotros-grid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: unset;
+    column-gap: 10rem;
+  }
+  .texto-nosotros{
+    grid-column: 2/3;
+
+   }
+   
 }
 
 /** Listado de productos **/
@@ -135,6 +192,11 @@ img {
 
 .producto{
   background-color: #037bc0;
+  margin-bottom: 2rem;
+}
+
+.producto:last-of-type{
+  margin-bottom: 0;
 }
 
 .texto-producto{
@@ -155,36 +217,10 @@ img {
   margin: 0 0 .5rem 0;
 }
 
-
-
-
-
-/** Utilidades */
-.max-width-30{
-  max-width: 30rem;
-}
-
-.text-center{
-  text-align: center;
-}
-
-.btn{
-  display: block;
-  background-color: #8cbc00;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 900;
-  padding: 1rem;
-  transition: background-color .3s ease-out ;
-  text-align: center;
-  border: none;
-}
-
-.btn:hover{
-  background-color: #769c02;
-  cursor: pointer;
-}
-
+@media (min-width: 768px){ 
+  .producto{
+    margin-bottom: 0;
+  }
 .listado-productos{
   display: grid;
   grid-template-columns: repeat(6,1fr);
@@ -236,6 +272,35 @@ img {
 {
   grid-column-start: 5;
   grid-column-end: 7;
+}
+}
+
+
+
+/** Utilidades */
+.max-width-30{
+  max-width: 30rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.btn{
+  display: block;
+  background-color: #8cbc00;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color .3s ease-out ;
+  text-align: center;
+  border: none;
+}
+
+.btn:hover{
+  background-color: #769c02;
+  cursor: pointer;
 }
 
 /** Footer **/
